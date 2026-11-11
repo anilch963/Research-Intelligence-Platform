@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(uv --version)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(python --version)",
+      "PowerShell(if \\($env:OPENAI_API_KEY\\) { \"OPENAI_API_KEY is set \\(length $\\($env:OPENAI_API_KEY.Length\\)\\)\" } else { \"OPENAI_API_KEY not set in env\" }; Test-Path D:\\\\workspace\\\\1011\\\\backend\\\\.env)",
+      "PowerShell(Set-Location D:\\\\workspace\\\\1011\\\\backend; uv sync 2>&1 | Select-Object -Last 2; uv run python -W ignore \"C:\\\\Users\\\\Lenovo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--workspace-1011\\\\5e3b6d71-824e-4eac-8d90-07eae417f159\\\\scratchpad\\\\offline_check.py\" 2>&1 | Where-Object { $_ -notmatch 'Warning|warn' })",
+      "PowerShell(Set-Location D:\\\\workspace\\\\1011\\\\backend; $s=\"C:\\\\Users\\\\Lenovo\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--workspace-1011\\\\5e3b6d71-824e-4eac-8d90-07eae417f159\\\\scratchpad\"; Copy-Item ..\\\\README.md \"$s\\\\README.md\"; $j='{\"retriever\":\"R\",\"timestamp\":\"2026-11-10T00:00:00\",\"config\":{\"num_questions\":18,\"top_k\":4,\"bm25_weight\":0.5,\"llm_model\":\"m\",\"eval_llm_model\":\"j\"},\"summary\":{\"faithfulness\":0.9,\"answer_relevancy\":0.8,\"llm_context_precision_with_reference\":0.7},\"per_question\":[]}'; $j.Replace\\('\"R\"','\"vector\"'\\) | Out-File -Encoding ascii \"$s\\\\a.json\"; $j.Replace\\('\"R\"','\"hybrid\"'\\) | Out-File -Encoding ascii \"$s\\\\b.json\"; uv run python -W ignore -m eval.compare \"$s\\\\a.json\" \"$s\\\\b.json\" --update-readme \"$s\\\\README.md\" | Select-Object -Last 2; Select-String -Path \"$s\\\\README.md\" -Pattern \"Faithfulness \\\\|\")",
+      "PowerShell(Set-Location D:\\\\workspace\\\\1011\\\\backend; uv run python -W ignore -m app.ingest 2>&1 | Where-Object { $_ -notmatch 'Warning' } | Select-Object -Last 5)",
+      "PowerShell(Set-Location D:\\\\workspace\\\\1011\\\\backend; $ok=$false; for\\($i=0;$i -lt 30;$i++\\){ try { Invoke-WebRequest -UseBasicParsing http://localhost:8000/api/health -TimeoutSec 2 | Out-Null; $ok=$true; break } catch { Start-Sleep 1 } }; \"backend up: $ok\"; uv run python -W ignore scripts/smoke_test.py; \"--- via Vite proxy \\(:5173\\) ---\"; \\(Invoke-RestMethod -Method Post -Uri http://localhost:5173/api/query -ContentType 'application/json' -Body '{\"question\":\"Who is the CFO?\",\"retriever\":\"hybrid\"}'\\).answer)"
+    ]
+  }
+}
