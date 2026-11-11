@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+backend/.env
+
+# Data generated at runtime
+backend/data/chroma/
+backend/eval/testset.draft.json
+
+# Frontend
+node_modules/
+frontend/dist/
