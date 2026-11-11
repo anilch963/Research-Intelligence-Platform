@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Who founded Aurelia Freight Analytics, and when and where was it founded?",
+    "ground_truth": "Aurelia Freight Analytics was founded in 2016 in Rotterdam, Netherlands, by Mireille Vandaele and Tomasz Kowalczyk."
+  },
+  {
+    "question": "What was Aurelia's revenue in FY2024 and how fast did it grow?",
+    "ground_truth": "FY2024 revenue was €74.6M, up 28% year over year from €58.2M in FY2023."
+  },
+  {
+    "question": "How did gross margin change between FY2023 and FY2024?",
+    "ground_truth": "Gross margin improved from 71% in FY2023 to 74% in FY2024."
+  },
+  {
+    "question": "What was net revenue retention in FY2024?",
+    "ground_truth": "Net revenue retention was 118% in FY2024, up from 112% in FY2023."
+  },
+  {
+    "question": "How much equity funding has Aurelia raised in total, and who led the Series C?",
+    "ground_truth": "Aurelia has raised €147M in total. The €95M Series C in September 2023 was led by Meridian Capital."
+  },
+  {
+    "question": "Who is Aurelia's CFO and when did they join?",
+    "ground_truth": "Priya Raman is the Chief Financial Officer and joined in March 2022 from a European payments company."
+  },
+  {
+    "question": "What does DockSync do and when was it launched?",
+    "ground_truth": "DockSync is a dock appointment scheduling product launched in 2023 that lets shippers publish loading-dock availability and carriers book time slots, reducing detention time."
+  },
+  {
+    "question": "What does error code TL-1042 mean and how do I fix it?",
+    "ground_truth": "TL-1042 means the device is not paired: the ELD or telematics device ID has not been linked to a vehicle. Pair it under Settings > Devices."
+  },
+  {
+    "question": "What does TL-3307 indicate?",
+    "ground_truth": "TL-3307 means the telematics feed is stale: no position update has been received for more than 30 minutes. Check the device's connectivity and power."
+  },
+  {
+    "question": "What is the TraceLine API rate limit on the Enterprise plan and what happens if it is exceeded?",
+    "ground_truth": "Enterprise API keys are limited to 3,000 requests per minute. Requests over the limit receive HTTP 429 with a Retry-After header."
+  },
+  {
+    "question": "How are TraceLine webhooks signed?",
+    "ground_truth": "Webhooks are signed with HMAC-SHA256 and the signature is sent in the X-TraceLine-Signature header, to be verified with the shared webhook secret."
+  },
+  {
+    "question": "How long is position history retained on the Standard and Enterprise plans?",
+    "ground_truth": "Position history is retained for 13 months on Standard and 36 months on Enterprise."
+  },
+  {
+    "question": "What share of FY2024 revenue came from North America?",
+    "ground_truth": "North America contributed 31% of FY2024 revenue, up from 22% in FY2023."
+  },
+  {
+    "question": "What support do Enterprise customers get for Severity 1 incidents?",
+    "ground_truth": "Enterprise customers get 24/7 phone support with a 1-hour first response for Severity 1 incidents, plus a dedicated customer success manager."
+  },
+  {
+    "question": "What are the principal business risks identified by management?",
+    "ground_truth": "A prolonged freight recession reducing carrier technology budgets, competition from TMS incumbents adding optimization features, and tightening EU data-residency requirements that could raise hosting costs."
+  },
+  {
+    "question": "What is the starting price of RouteForge?",
+    "ground_truth": "RouteForge pricing starts at €29 per vehicle per month."
+  },
+  {
+    "question": "When does management expect Aurelia to reach operating break-even?",
+    "ground_truth": "Management expects operating break-even during FY2025; operating loss narrowed from €9.4M in FY2023 to €3.1M in FY2024."
+  },
+  {
+    "question": "How long do TraceLine API access tokens last and how are they obtained?",
+    "ground_truth": "Access tokens are obtained via the OAuth2 client-credentials flow and expire after 3600 seconds (one hour)."
+  }
+]
